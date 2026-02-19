@@ -2,7 +2,7 @@ package Jobsheet_2_19022026;
 
 public class practicum_1_Mahasiswa_19 {
 
-public practicum_1_Mahasiswa_19 () {
+    public practicum_1_Mahasiswa_19 () {
     }
 
     public practicum_1_Mahasiswa_19 (String nm, String NIM, double GPA, String cls) {
