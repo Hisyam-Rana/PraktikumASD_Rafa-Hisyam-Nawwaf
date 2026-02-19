@@ -15,6 +15,9 @@ public class practicum_2_StudentMain_19 {
         mhs1.updateGPA(3.60);
         mhs1.displayInformation();
 
+        practicum_1_Mahasiswa_19 mhs2 = new practicum_1_Mahasiswa_19("Annisa NABILA", "2141720160", 3.25, "TI 2L");
+        mhs2.updateGPA(3.30);
+        mhs2.displayInformation();
 
     }
 
