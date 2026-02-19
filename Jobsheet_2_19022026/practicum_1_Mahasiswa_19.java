@@ -23,15 +23,21 @@ public class practicum_1_Mahasiswa_19 {
     }
 
     String performanceValue () {
-        if (gpa >= 3.5) {
-            return "Excellent performance";
-        } else if (gpa >= 3.0) {
-            return "Good performance";
-        } else if (gpa >= 2.0) {
-            return "Adequate performance";
+        if (gpa <= 0.0 && gpa >= 4.0) {
+            if (gpa >= 3.5) {
+                return "Excellent performance";
+            } else if (gpa >= 3.0) {
+                return "Good performance";
+            } else if (gpa >= 2.0) {
+                return "Adequate performance";
+            } else {
+                return "Poor perfonmance";
+            }
         } else {
-            return "Poor perfonmance";
+            return "GPA is invalid. Must be between 0.0 and 4.0";
         }
-    } 
-}
+    }
+            
+} 
+
 
