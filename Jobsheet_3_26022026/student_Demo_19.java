@@ -29,10 +29,7 @@ public class student_Demo_19 {
         System.out.println("----------------------------------");
         for (int i = 0; i < arrayofStudent.length; i++) {
             System.out.println("Data for Student number-"+(i+1));
-            System.out.println("NIM     : "+ arrayofStudent[i].nim);
-            System.out.println("Name    : "+ arrayofStudent[i].name);
-            System.out.println("Class   : "+ arrayofStudent[i].clasS);
-            System.out.println("GPA     : "+ arrayofStudent[i].gpa);
+            arrayofStudent[i].printInfo();
             System.out.println("----------------------------------");
         }
         isc.close();
