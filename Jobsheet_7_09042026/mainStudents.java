@@ -1,0 +1,44 @@
+package Jobsheet_7_09042026;
+import java.util.Scanner;
+public class mainStudents {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Scanner sn = new Scanner(System.in);
+        
+        searchStudents data = new searchStudents();
+        int amountStudents = 5;
+
+        System.out.println("--------------------------------------------------");
+        System.out.println("Input student data accordingly from smallest NIM");
+        for (int i = 0; i < amountStudents; i++) {
+            System.out.println("-------------------------");
+            System.out.print("NIM\t: ");
+            int nim =sc.nextInt();
+            System.out.print("Name\t: ");
+            String name =sn.nextLine();
+            System.out.print("Age\t: ");
+            int age =sc.nextInt();
+            System.out.print("GPA\t: ");
+            double gpa =sc.nextDouble();
+
+            students std = new students(nim, age, name, gpa);
+            data.add(std);
+        }
+
+        System.out.println("-------------------------");
+        System.out.println("Entire Student Data");
+        System.out.println("-------------------------");
+        data.display();
+
+        System.out.println("______________________________");
+        System.out.println("______________________________");
+        System.out.print("Search student by NIM : ");
+        int search = sc.nextInt();
+        System.out.println("Using Sequential Search");
+        int posistion = data.findSeqSearch(search);
+        data.showPosition(search, posistion);
+        data.showData(search, posistion);
+    sc.close();
+    sn.close();
+    }
+}
