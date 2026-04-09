@@ -37,7 +37,7 @@ public class searchStudents {
             mid = (left + right) /2;
             if (search == listStd[mid].nim) {
                 return (mid);
-            } else if (listStd[mid].nim > search) {
+            } else if (listStd[mid].nim < search) {
                 return findBinarySearch(search, left, mid -1);
             } else {
                 return findBinarySearch(search, mid +1, right);
@@ -61,7 +61,7 @@ public class searchStudents {
             System.out.println("Age \t : " + listStd[pos].age);
             System.out.println("GPA \t : " + listStd[pos].gpa);
         } else {
-            System.out.println("Data "+x+"is not found");
+            System.out.println("Data "+x+" is not found");
         }
     }
 }
