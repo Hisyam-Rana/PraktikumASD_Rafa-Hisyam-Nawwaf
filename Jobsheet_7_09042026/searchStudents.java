@@ -1,8 +1,12 @@
 package Jobsheet_7_09042026;
 
 public class searchStudents {
-    students[] listStd = new students[5];
+    students[] listStd;
     int idx;
+
+    public searchStudents(int size) {
+        listStd = new students[size];
+    }
     
     public void add(students std) {
         if (idx < listStd.length) {
