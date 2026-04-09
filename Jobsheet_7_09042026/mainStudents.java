@@ -34,10 +34,14 @@ public class mainStudents {
         System.out.println("______________________________");
         System.out.print("Search student by NIM : ");
         int search = sc.nextInt();
-        System.out.println("Using Sequential Search");
-        int posistion = data.findSeqSearch(search);
-        data.showPosition(search, posistion);
-        data.showData(search, posistion);
+        //System.out.println("Using Sequential Search");
+        //int position = data.findSeqSearch(search);
+        System.out.println("Using Binary search");
+        int position1 = data.findBinarySearch(search, 0, amountStudents -1);
+        //data.showPosition(search, position);
+        //data.showData(search, position);
+        data.showPosition(search, position1);
+        data.showData(search, position1);
     sc.close();
     sn.close();
     }
