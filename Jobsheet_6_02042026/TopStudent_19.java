@@ -67,4 +67,18 @@ public class TopStudent_19 {
             }
         }
     }
+
+    public void selectionSort () {
+        for (int i = 0; i < idx -1; i++) {
+            int minIndex = i;
+            for (int j = i +1; j < idx; j++) {
+                if (listStudent_19s[j].gpa < listStudent_19s[minIndex].gpa) {
+                    minIndex = j;
+                }
+            }
+            Student_19 temp = listStudent_19s[minIndex];
+            listStudent_19s[minIndex] = listStudent_19s[i];
+            listStudent_19s[i] = temp;
+        }
+    }
 }
