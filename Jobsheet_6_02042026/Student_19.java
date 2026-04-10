@@ -1,10 +1,14 @@
 package Jobsheet_6_02042026;
 
+import java.util.Scanner;
+
 public class Student_19 {
     String nim;
     String name;
     String studentClass;
     double gpa;
+
+    Scanner sc = new Scanner(System.in);
 
     public Student_19 () {}
 
@@ -16,6 +20,7 @@ public class Student_19 {
     }
 
     public void print () {
-        System.out.println("NIM : " +nim+ ", Name : " +name+ ", Class : " +studentClass+ ", GPA : " + gpa);
+        
+        System.out.println("NIM : " +nim+ ", Name : " +name+ " ,\tClass : " +studentClass+ ", GPA : " + gpa);
     }
 }
