@@ -81,4 +81,17 @@ public class TopStudent_19 {
             listStudent_19s[i] = temp;
         }
     }
+
+    public void insertionSort() {
+        for (int i = 1; i < idx; i++) {
+            Student_19 temp = listStudent_19s[i];
+            int j = i;
+
+            while (j > 0 && listStudent_19s[j-1].gpa > temp.gpa) {
+                listStudent_19s[j] = listStudent_19s[j-1];
+                j--;
+            }
+            listStudent_19s[j] = temp;
+        }
+    }
 }
