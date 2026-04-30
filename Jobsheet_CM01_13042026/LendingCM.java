@@ -9,6 +9,7 @@ public class LendingCM {
     int loanLimit = 5;
     int overdue;
     int fine;
+    int count = 0;
 
     Scanner sc = new Scanner(System.in);
 

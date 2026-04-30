@@ -6,18 +6,18 @@ public class CMMethod {
 
     public static StudentCM[] listStudent() {
         return new StudentCM[] {
-            new StudentCM ("22001", "Andi", "Informatics Engineering"),
-            new StudentCM ("22002", "Budi", "Informatics Engineering"),
-            new StudentCM ("22003", "Citra", "Business Information Systems")
+            new StudentCM ("22001", "Andi", "Informatics Engineering", "083823797095"),
+            new StudentCM ("22002", "Budi", "Informatics Engineering", "085385258439"),
+            new StudentCM ("22003", "Citra", "Business Information Systems", "083885250797")
         };
     }
 
     static BookCM[] listBook() {
         return new BookCM[] {
-            new BookCM("B001", "Algorithm", 2020),
-            new BookCM("B002", "Database", 2019),
-            new BookCM("B003", "Programming", 2021),
-            new BookCM("B004", "Physics", 2024)
+            new BookCM("B001", "Algorithm", 2020,"Marcus"),
+            new BookCM("B002", "Database", 2019, "Bethany"),
+            new BookCM("B003", "Programming", 2021, "Amanda"),
+            new BookCM("B004", "Physics", 2024, "Santoso")
         };
     }
 
@@ -49,7 +49,7 @@ public class CMMethod {
         for (int i = 1; i < listloan.length; i++) {
             LendingCM temp = listloan[i];
             int j = i;
-
+            
             while (j > 0 && listloan[j-1].fine < temp.fine) {
                 listloan[j] = listloan[j-1];
                 j--;

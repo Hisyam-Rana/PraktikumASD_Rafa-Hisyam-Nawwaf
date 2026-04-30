@@ -50,9 +50,20 @@ public class MainCM {
                 case 4:
                     System.out.println("\nAfter sorting (Largest fine):");
                     CMMethod.sortbyFine(loan);
+                    LendingCM list = new LendingCM();
+                    
                     for (LendingCM lending : loan) {
                         lending.printLending();
                     }
+                    
+                    for (int i = 0; i < loan.length; i++) {
+                        if (list.loanPeriod < list.loanLimit) {
+                            list.count++;
+                        }
+                    }
+
+                    System.out.println("The Number of student whose load periode Exceeds : "+ list.count);
+                    
                     break;
                 
                 case 5:

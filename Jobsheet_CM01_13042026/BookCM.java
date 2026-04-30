@@ -5,21 +5,24 @@ public class BookCM {
     String title;
     String status;
     int year;
+    String publisher;
 
     Scanner sc = new Scanner(System.in);
 
     public BookCM () {}
 
-    public BookCM (String codE, String titlE, int yeaR) {
+    public BookCM (String codE, String titlE, int yeaR, String publisheR) {
         this.code = codE;
         this.title = titlE;
         this.year = yeaR;
+        this.publisher = publisheR;
     }
 
     public void printBook () {
         
         System.out.println ("Code : " +code+ 
                             " | Title : " +title+ 
-                            "   \t| Year : " +year);
+                            "   \t| Year : " +year +
+                            " | Publisher : " +publisher);
     }
 }
