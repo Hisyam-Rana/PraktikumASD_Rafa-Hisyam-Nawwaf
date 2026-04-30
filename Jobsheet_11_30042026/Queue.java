@@ -87,4 +87,14 @@ public class Queue {
         }
         return dt;
     }
+
+    void clear() {
+    if (!isEmpty()) {
+        front = rear = -1;
+        size = 0;
+            System.out.println("All data has been successfully removed!");
+        } else {
+            System.out.println("Queue is already empty!!!");
+        }
+    }
 }

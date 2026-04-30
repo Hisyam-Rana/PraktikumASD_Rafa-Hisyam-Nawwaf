@@ -48,9 +48,9 @@ public class QueueMain {
                     System.out.println();
                     break;
                 
-                //case 5:
-                    //Q.clear();
-                    //break;
+                case 5:
+                    Q.clear();
+                    break;
                 
                 default:
                     System.out.println("Invalid Choices");
