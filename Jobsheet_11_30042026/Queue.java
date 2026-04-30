@@ -64,7 +64,7 @@ public class Queue {
             size++;
             System.out.printf("%d is succesfully added at index %d\n", dt, rear);
         } else {
-            System.out.println("Queue is full!!");
+            System.exit(0);
         }
     }
 
@@ -82,8 +82,8 @@ public class Queue {
                     front++;
                 }
             }
-        } else {
-            System.out.println("Queue is empty!!");
+        } else {    
+            System.exit(0);
         }
         return dt;
     }
