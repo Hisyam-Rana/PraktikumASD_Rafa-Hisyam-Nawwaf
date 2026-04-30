@@ -36,6 +36,8 @@ public class StudentA19Demo {
                         int score = isc.nextInt();
                         assesed.Grading(score);
                         System.out.printf("%s's assignment score is %d\n", assesed.name, score);
+                        String binary = stack.convertToBinary(score);
+                        System.out.printf("Assignment grade of in binary is %s\n", binary);
                     }
                     break;
 
