@@ -12,8 +12,9 @@ public class StudentQueueMain {
             System.out.println("1. Enqueue Student");
             System.out.println("2. Dequeue Student");
             System.out.println("3. Display Front");
-            System.out.println("4. Display All Data");
-            System.out.println("5. Queue Size");
+            System.out.println("4. Display Rear");
+            System.out.println("5. Display All Data");
+            System.out.println("6. Queue Size");
             System.out.println("0. Exit");
             System.out.print("Choose a menu : ");
             choice = isc.nextInt();
@@ -46,17 +47,21 @@ public class StudentQueueMain {
                     break;
 
                 case 4:
-                    queue.print();
+                    queue.peekRear();
                     break;
                 
                 case 5:
+                    queue.print();    
+                    break;
+                
+                case 6:
                     System.out.println("Queue size  : "+ queue.size);
                     break;
                 
                 case 0:
                     System.out.println("Thanks!!");
                     break;
-                
+
                 default:
                     System.out.println("Invalid Menu");
                     break;
