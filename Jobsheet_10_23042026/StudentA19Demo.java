@@ -11,7 +11,8 @@ public class StudentA19Demo {
             System.out.println("1. Collecting Assignment");
             System.out.println("2. Marking Assignment");
             System.out.println("3. View Top Assignment");
-            System.out.println("4. View List of Assignment");
+            System.out.println("4. View First Assignment");
+            System.out.println("5. View List of Assignment");
             System.out.print("Choose    : ");
             choose = isc.nextInt();
             isc.nextLine();
@@ -26,6 +27,8 @@ public class StudentA19Demo {
                     StudentA19 std = new StudentA19(nim, name, clasS);
                     stack.push (std);
                     System.out.printf("%s's assignment has succesfully collected\n", std.name);
+                    stack.count();
+                    System.out.println("Total assignment in stack is "+stack.count());
                     break;
             
                 case 2:
@@ -49,6 +52,13 @@ public class StudentA19Demo {
                     break;
 
                 case 4:
+                    StudentA19 L = stack.peekBottom();
+                    if (L != null) {
+                        System.out.println("The first assignment was submitted by "+L.name);
+                    }
+                    break;
+
+                case 5:
                     System.out.println("List all of assignment");
                     System.out.println("Name\tNIM\tClass");
                     stack.print();
@@ -58,7 +68,7 @@ public class StudentA19Demo {
                     System.out.println("Invalid Choices");
                     break;
             }
-        } while (choose >= 1 && choose <= 4);
+        } while (choose >= 1 && choose <= 5);
     isc.close();
     }
 }

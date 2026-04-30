@@ -56,6 +56,18 @@ public class StudentAssignmentStack {
         }
     }
 
+    StudentA19 peekBottom () {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            return null;
+        }
+    }
+
+    int count () {
+        return top +1;
+    }
+
     void print () {
         for (int i = 0; i <= top; i++) {
             System.out.println(stack[i].nim+"\t"+stack[i].name+"\t"+stack[i].className);
