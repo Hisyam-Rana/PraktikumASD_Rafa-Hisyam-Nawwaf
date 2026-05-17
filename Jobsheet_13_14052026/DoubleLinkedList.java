@@ -95,10 +95,16 @@ public class DoubleLinkedList {
     void remove(int index) {
         if(isEmpty()){
             System.out.println("Double linked list is currently empty!!");
-        }else if (index == 0){
+        }
+        Node temp = head;
+        if (index < 0 || temp == null) {
+            System.out.println("Index out of bounds or invalid!!");
+        return;
+        }
+
+        if (index == 0){
             removeFirst();
         }else{
-            Node temp = head;
             for(int i=0; i<index; i++){
                 temp = temp.next;
             }
