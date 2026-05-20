@@ -7,7 +7,6 @@ public class CMMain {
         DLLO order = new DLLO();
         int choice;
         
-        order.printOrder();
         buy.enqueue(new Buyer(1, "Ainra", "08224500000"));
         buy.enqueue(new Buyer(2, "Danra", "08224511111"));
         buy.enqueue(new Buyer(3, "Sanri", "08224522222"));
