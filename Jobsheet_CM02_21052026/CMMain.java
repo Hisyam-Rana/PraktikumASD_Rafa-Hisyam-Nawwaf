@@ -26,7 +26,8 @@ public class CMMain {
             System.out.print("Select menu : ");
             String c = isc.nextLine();
             choice = Integer.parseInt(c);
-            
+            System.out.println();
+
             switch (choice) {
                 case 1:
                     System.out.print("Buyer Name    : ");
@@ -37,6 +38,7 @@ public class CMMain {
                     buy.enqueue(nb);
                     System.out.println("The queue has been succesfully added with the number : "+currentqn);
                     currentqn++;
+                    System.out.println();
                     break;
                 
                 case 2:
@@ -48,6 +50,14 @@ public class CMMain {
                         System.out.println("There is currently no queue to serve!");
                         break;
                     }
+                    buy.printB();
+                    System.out.print("Enter queue number to serve : ");
+                    String target = isc.nextLine();
+                    int targetqn = Integer.parseInt(target);
+                    Buyer served = buy.dequeueSpecific(targetqn);
+                    System.out.println();
+
+                    if (served != null) {
                     System.out.print("Order Code    : ");
                     String oc = isc.nextLine();
                     int orderCode = Integer.parseInt(oc);
@@ -59,8 +69,9 @@ public class CMMain {
                     Order Od = new Order(orderCode, orderName, price);
                     order.enqueue(Od);
                     
-                    Buyer served = buy.dequeueB();
                     System.out.println(served.name+" has ordered "+ orderName);
+                    }
+                    System.out.println();
                     break;
                 
                 case 4:
@@ -68,7 +79,9 @@ public class CMMain {
                     break;
                 
                 case 0:
-                    System.out.println("Thank You");
+                    System.out.println("===============================");
+                    System.out.println("           THANK YOU           ");
+                    System.out.println("===============================");
                     break;
                 default:
                     break;

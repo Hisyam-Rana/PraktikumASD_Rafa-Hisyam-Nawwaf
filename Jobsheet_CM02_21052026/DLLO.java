@@ -57,7 +57,7 @@ public class DLLO {
             System.out.println("There is currently no order");
             return;
         }
-
+        int totalPrice = 0;
         System.out.println("===================================");
         System.out.println("ORDER REPORT (SORTED BY ORDER NAME)");
         System.out.println("===================================");
@@ -68,8 +68,12 @@ public class DLLO {
         NodeOrder temp = front;
         while(temp!=null){
             temp.dataO.printO();
+            totalPrice += temp.dataO.price;
             temp = temp.next;
         }
+        System.out.println("===================================");
+        System.out.println("TOTAL ORDER REPORT   : "+totalPrice);
+        System.out.println("===================================");
         System.out.println("");
     }
 }

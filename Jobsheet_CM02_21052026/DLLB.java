@@ -50,9 +50,41 @@ public class DLLB {
                 temp.dataB.printB();
                 temp = temp.next;
             }
+            System.out.println("===============================");
             System.out.println("");
         }else{
             System.out.println("There is currently no queue");
         }
+    }
+
+    public Buyer dequeueSpecific(int target) {
+        if (isEmpty()) {
+            System.out.println("There is currently no queue");
+            return null;
+        }
+        NodeBuyer temp = front;
+        while (temp != null) {
+            if (temp.dataB.queNumber == target) {
+                break;
+            }
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("Queue number "+target+" not found!");
+            return null;
+        }
+        if (temp == front && temp == rear) {
+            front = rear = null;
+        } else if (temp == front) {
+            front = front.next;
+            front.prev = null;
+        } else if (temp == rear) {
+            rear = rear.prev;
+            rear.next = null;
+        } else {
+            temp.prev.next = temp.next;
+            temp.next.prev = temp.prev;
+        }
+        return temp.dataB;
     }
 }
