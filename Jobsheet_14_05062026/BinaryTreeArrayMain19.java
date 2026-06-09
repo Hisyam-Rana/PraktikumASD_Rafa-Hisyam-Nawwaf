@@ -15,5 +15,11 @@ public class BinaryTreeArrayMain19 {
     bta.populateData(data, data.length-1);
     System.out.println("In-order traversal : ");
     bta.traverseInOrder(0);
+    System.out.println();
+    
+    //Assignment
+    bta.add(new Student19("244107020505", "Azril", "TI-1I", 3.69));
+    System.out.println("Pre-order traversal : ");
+    bta.traversePreOrder(0);
     }
 }
