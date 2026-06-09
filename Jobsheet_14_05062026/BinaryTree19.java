@@ -155,12 +155,11 @@ public class BinaryTree19 {
     public void addRecursive(Student19 data) {
         root = addRecursive(root, data);
 	}
-
+    
     Node19 addRecursive(Node19 current, Student19 data) {
         if (current == null) {
             return new Node19(data);
         }
-
         if (data.gpa < current.data.gpa) {
             current.left = addRecursive(current.left, data);
         } else if (data.gpa > current.data.gpa) {
@@ -181,7 +180,7 @@ public class BinaryTree19 {
         System.out.print("Student with Lowest GPA : ");
         current.data.print();
     }
-
+    
     public void getMaxIPK() {
         if (isEmpty()) {
             System.out.println("Tree is empty!!");
@@ -193,5 +192,20 @@ public class BinaryTree19 {
         }
         System.out.print("Student with Highest GPA : ");
         current.data.print();
+    }
+    
+    public void displayStudentsWithGPAAbove(double threshold) {
+        System.out.println("Students with GPA above " + threshold + ":");
+        displayStudentsWithGPAAbove(root, threshold);
+    }
+    
+    void displayStudentsWithGPAAbove(Node19 node, double threshold) {
+        if (node != null) {
+            displayStudentsWithGPAAbove(node.left, threshold);
+            if (node.data.gpa > threshold) {
+                node.data.print();
+            }
+        displayStudentsWithGPAAbove(node.right, threshold);
+        }
     }
 }

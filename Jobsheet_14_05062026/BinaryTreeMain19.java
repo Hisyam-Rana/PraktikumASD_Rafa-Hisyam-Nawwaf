@@ -43,6 +43,7 @@ public class BinaryTreeMain19 {
         bst.traverseInOrder(bst.root);
         bst.getMinGPA();
         bst.getMaxIPK();
+        bst.displayStudentsWithGPAAbove(3.50);
         
     }
 }
