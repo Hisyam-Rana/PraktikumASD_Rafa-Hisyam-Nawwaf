@@ -39,10 +39,12 @@ public class BinaryTreeMain19 {
         
         //Assignment
         bst.addRecursive(new Student19("244107020666", "Amba", "TI-1I", 3.67));
-        System.out.println("Student list : ");
+        System.out.println("\nStudent list : ");
         bst.traverseInOrder(bst.root);
+        System.out.println();
         bst.getMinGPA();
         bst.getMaxIPK();
+        System.out.println();
         bst.displayStudentsWithGPAAbove(3.50);
         
     }

@@ -114,7 +114,6 @@ public class BinaryTree19 {
                 return;
             }
         }
-        
         //delete node with no children
         if (current.left == null && current.right == null) {
             if (current == root) {
@@ -147,8 +146,9 @@ public class BinaryTree19 {
             } else if (isLeftChild) {
                 parent.left = successor;
             } else {
-                successor.left = current.left;
+                parent.right = successor;
             }
+            successor.left = current.left;
         }
     }
     
