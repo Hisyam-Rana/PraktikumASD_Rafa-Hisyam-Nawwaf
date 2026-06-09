@@ -151,4 +151,21 @@ public class BinaryTree19 {
             }
         }
     }
+    
+    public void addRecursive(Student19 data) {
+        root = addRecursive(root, data);
+	}
+    
+    Node19 addRecursive(Node19 current, Student19 data) {
+        if (current == null) {
+            return new Node19(data);
+        }
+
+        if (data.gpa < current.data.gpa) {
+            current.left = addRecursive(current.left, data);
+        } else if (data.gpa > current.data.gpa) {
+            current.right = addRecursive(current.right, data);
+        }
+	return current;
+	}
 }

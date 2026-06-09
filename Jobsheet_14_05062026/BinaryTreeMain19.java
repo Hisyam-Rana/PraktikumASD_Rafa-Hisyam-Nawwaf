@@ -37,5 +37,12 @@ public class BinaryTreeMain19 {
         System.out.println("Student list after deletion : ");
         bst.traverseInOrder(bst.root);
         
+        //Assignment
+        bst.addRecursive(new Student19("244107020666", "Amba", "TI-1I", 3.67));
+        
+        
+        System.out.println("Student list : ");
+        bst.traverseInOrder(bst.root);
+        
     }
 }
